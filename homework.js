@@ -143,9 +143,9 @@ function multigreeting(nom, cc){
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
 
-function gcd(a, b){
-    let first = a
-    let second = b
+function gcd(i, j){
+    let first = i
+    let second = j
     let d = 0
     
     while(first % 2 == 0 && second % 2 == 0){
@@ -158,16 +158,18 @@ function gcd(a, b){
     }
     while(first != second){
       if(isEven(first) === true){
-          let first = (frist/2);
+          first = (first/2);
+          console.log(first);
       }
       else if(isEven(second) === true){
-          let second = (second/2);
+          second = (second/2);
+          console.log(second);
       }
       else if(first > second){
-          let first = ((first - second)/2)
+          first = ((first - second)/2);
       }
       else{
-          let second = ((second - first)/2)
+          second = ((second - first)/2);
       }
     }
 
