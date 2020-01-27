@@ -148,14 +148,30 @@ function gcd(a, b){
     let second = b
     let d = 0
     
-    while(first == second){
-        first = first/2
-        second = second/2
-        d = d++
+    while(first % 2 == 0 && second % 2 == 0){
+        first = first/2;
+        second = second/2;
+        d = d+1;
+        console.log(d);
+        console.log(first);
+        console.log(second);
     }
     while(first != second){
-
+      if(isEven(first) === true){
+          let first = (frist/2);
+      }
+      else if(isEven(second) === true){
+          let second = (second/2);
+      }
+      else if(first > second){
+          let first = ((first - second)/2)
+      }
+      else{
+          let second = ((second - first)/2)
+      }
     }
-    let g = a
+
+    let g = first
     return g*(2**d)
+    
 }
