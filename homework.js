@@ -97,6 +97,25 @@ function lesser(i, j){
 //
 // If any other language code is used, return nothing.
 
+function multigreeting(nom, cc){
+    if(cc == "en"){
+        return("Hello, " + nom +"!")
+    }
+    else if(cc == "es"){
+        return("¡Hola, " + nom +"!")
+    }
+    else if(cc == "fr"){
+        return("Bonjour, " + nom +"!")
+    }
+    else if(cc == "eo"){
+        return("Saluton, " + nom +"!")
+    }
+    else{
+        return
+    }
+
+}
+
 // 10. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
 // example, the greatest common divisor of 24 and 81 is 3. The greatest common divisor of
@@ -123,3 +142,7 @@ function lesser(i, j){
 
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
+
+function gcd(a, b){
+    
+}
