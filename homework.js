@@ -21,7 +21,7 @@ function greeting(name){
 
 function isOdd(number){
 
-    if ((number%2) == 1 || (number%2) == -1){
+    if (Math.abs(number%2) == 1){
         return true
     }
     else{return false}
@@ -144,5 +144,18 @@ function multigreeting(nom, cc){
 // divisor using the instructions above.
 
 function gcd(a, b){
+    let first = a
+    let second = b
+    let d = 0
     
+    while(first == second){
+        first = first/2
+        second = second/2
+        d = d++
+    }
+    while(first != second){
+
+    }
+    let g = a
+    return g*(2**d)
 }
