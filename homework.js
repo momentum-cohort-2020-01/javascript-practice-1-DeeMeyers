@@ -147,22 +147,17 @@ function gcd(i, j){
     
     let d = 0
     
-    while(i % 2 == 0 && j % 2 == 0){
+    while(isEven(i) == true && isEven(j) == true){
         i = i/2;
         j = j/2;
         d = d+1;
-        console.log(d);
-        console.log(i);
-        console.log(j);
     }
     while(i != j){
       if(isEven(i) === true){
           i = (i/2);
-          console.log(i);
       }
       else if(isEven(j) === true){
           j = (j/2);
-          console.log(j);
       }
       else if(i > j){
           i = ((i - j)/2);
@@ -171,7 +166,5 @@ function gcd(i, j){
           j = ((j - i)/2);
       }
     }
-
     return i*(2**d)
-    
 }
