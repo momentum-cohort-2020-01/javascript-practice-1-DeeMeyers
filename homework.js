@@ -144,36 +144,34 @@ function multigreeting(nom, cc){
 // divisor using the instructions above.
 
 function gcd(i, j){
-    let first = i
-    let second = j
+    
     let d = 0
     
-    while(first % 2 == 0 && second % 2 == 0){
-        first = first/2;
-        second = second/2;
+    while(i % 2 == 0 && j % 2 == 0){
+        i = i/2;
+        j = j/2;
         d = d+1;
         console.log(d);
-        console.log(first);
-        console.log(second);
+        console.log(i);
+        console.log(j);
     }
-    while(first != second){
-      if(isEven(first) === true){
-          first = (first/2);
-          console.log(first);
+    while(i != j){
+      if(isEven(i) === true){
+          i = (i/2);
+          console.log(i);
       }
-      else if(isEven(second) === true){
-          second = (second/2);
-          console.log(second);
+      else if(isEven(j) === true){
+          j = (j/2);
+          console.log(j);
       }
-      else if(first > second){
-          first = ((first - second)/2);
+      else if(i > j){
+          i = ((i - j)/2);
       }
       else{
-          second = ((second - first)/2);
+          j = ((j - i)/2);
       }
     }
 
-    let g = first
-    return g*(2**d)
+    return i*(2**d)
     
 }
